@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel=stylesheet href="style.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<script src="piglatin-logic.js"></script>
+<meta charset=utf-8 />
+<title>PigLatin JavaScript</title>
+</head>
+<body>
+  <div id='wrapper'>
+  <h1>Piglatin</h1>
+<form>
+<label for="word">Please enter some word: </label> <input id="word" type="text" value=""> 
+  <button type="button">send</button> 
+  </form>
+  <br />
+  <div id='content'></div>
+  </div>
+  <script>
+    $(function(){
+      $('button').click(function(){
+        var userInput = $('#word').val();
+
+        $('#content').text(userInput);   
+      })
+      
+    })    
+  </script>
+</body>
+</html>
