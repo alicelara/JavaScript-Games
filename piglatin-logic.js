@@ -1,7 +1,8 @@
 var vowels = 'aeiou'.split('');
 var cons = [];
 var consString = '';
-
+var wordarr;
+var userInput
 function is_vowel(letter){
     var result = false;
 
@@ -16,8 +17,6 @@ function is_vowel(letter){
 }
 
 
-var userInput = $('#word').val();
-var wordarr = userInput.split('')
 
 function piglatinResult(){
     for(var j = 0; j < userInput.length; j++){  
@@ -27,16 +26,28 @@ break;
     }
       
     else{
-        cons.push(wordarr.shift()) 
+        cons.push(wordarr.shift()); 
           //console.log('eu sou  a array de consoante === ' + cons)
          // console.log(wordarr)
       
     }
  consString = cons.join('')
-
-
   }
- console.log(wordarr.join('') + consString + 'ay')    
 
 }
-piglatinResult()
+     // $(function(){
+
+      $('button').click(function(){
+
+userInput = $('#word').val();
+
+wordarr = userInput.split('');
+        // var userInput = $('#word').val();
+      piglatinResult();        
+        console.log(wordarr.join('') + consString + 'ay');    
+
+         $('#content').text(wordarr.join('') + consString + 'ay');   
+      })       
+
+
+// piglatinResult()
