@@ -46,7 +46,7 @@ wordarr = userInput.split('');
       piglatinResult();        
         console.log(wordarr.join('') + consString + 'ay');    
 
-         $('#content').text(wordarr.join('') + consString + 'ay');   
+         $('#content').text((wordarr.join('') + consString + 'ay').toLowerCase());   
       })       
 
 

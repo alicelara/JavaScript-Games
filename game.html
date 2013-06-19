@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel=stylesheet href="style.css">
+  <link rel=stylesheet href="style.css">
 
 <meta charset=utf-8 />
 <title>PigLatin JavaScript</title>
 </head>
 <body>
   <div id='wrapper'>
-  <h1>Piglatin</h1>
+     <div id='wrapper-inside'>
+  <h1>piglatin</h1>
+    
 <form>
-<label for="word">Please enter some word: </label> <input id="word" placeholder="type something here" type="text" value=""> 
-  <button type="button">send</button> 
+  <input id="word" placeholder="  type something here" type="text" maxlength="25" value=""> 
+  <button type="button">SEND</button> 
   </form>
   <br />
+  <h2> piglatin translation</h2>
+   
   <div id='content'></div>
+    </div>
   </div>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 <script src="piglatin-logic.js"></script>
