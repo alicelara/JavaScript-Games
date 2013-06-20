@@ -21,8 +21,8 @@ function is_vowel(letter){
 function piglatinResult(){
     for(var j = 0; j < userInput.length; j++){  
     if( is_vowel(userInput.charAt(j)) ){
-//console.log(userInput + 'ay' );      
-break;
+      //console.log(userInput + 'ay' );      
+      break;
     }
       
     else{
@@ -31,22 +31,26 @@ break;
          // console.log(wordarr)
       
     }
- consString = cons.join('')
+    consString = cons.join('');
   }
-
 }
      // $(function(){
 
       $('button').click(function(){
 
-userInput = $('#word').val();
 
-wordarr = userInput.split('');
+      userInput = $('#word').val();
+
+      wordarr = userInput.split('');
         // var userInput = $('#word').val();
       piglatinResult();        
-        console.log(wordarr.join('') + consString + 'ay');    
+      console.log(wordarr.join('') + consString + 'ay');    
 
          $('#content').text((wordarr.join('') + consString + 'ay').toLowerCase());   
+
+         // reset these variables (and any others?)
+         consString = '';
+         cons = [];
       })       
 
 
